@@ -1,0 +1,39 @@
+# Ignore PHPUnit cache
+/.phpunit.cache
+
+# Ignore SSR and Node modules
+/bootstrap/ssr
+/node_modules
+
+# Ignore build and hot files
+/public/build
+/public/hot
+
+# Ignore storage files
+/public/storage
+/storage/*.key
+/storage/pail
+
+# Ignore vendor directory
+/vendor
+
+# Ignore environment files
+.env
+.env.backup
+.env.production
+
+# Ignore IDE and debug files
+.phpactor.json
+.phpunit.result.cache
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
+/auth.json
+
+# Ignore IDE-specific files
+/.fleet
+/.idea
+/.nova
+/.vscode
+/.zed

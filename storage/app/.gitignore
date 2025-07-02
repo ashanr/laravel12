@@ -1,0 +1,6 @@
+# Ignore all files
+*
+# Allow private and public directories and .gitignore
+!private/
+!public/
+!.gitignore
