@@ -8,6 +8,7 @@ export interface Auth {
 export interface BreadcrumbItem {
     title: string;
     href: string;
+    current?: boolean;
 }
 
 export interface NavGroup {
@@ -23,9 +24,15 @@ export interface NavItem {
 }
 
 export interface SharedData {
+    auth: {
+        user: User;
+    };
+    flash: {
+        message: string | null;
+        error: string | null;
+    };
     name: string;
     quote: { message: string; author: string };
-    auth: Auth;
     ziggy: Config & { location: string };
     sidebarOpen: boolean;
     [key: string]: unknown;
@@ -35,8 +42,10 @@ export interface User {
     id: number;
     name: string;
     email: string;
-    avatar?: string;
     email_verified_at: string | null;
+    role: string;
+    role_label?: string;
+    avatar?: string;
     created_at: string;
     updated_at: string;
     [key: string]: unknown; // This allows for additional properties...

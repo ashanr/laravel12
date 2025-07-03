@@ -41,10 +41,18 @@ class HandleInertiaRequests extends Middleware
 
         return [
             ...parent::share($request),
-            'name' => config('app.name'),
+            'name' => 'Uni Edu Connect Affiliate',
             'quote' => ['message' => trim($message), 'author' => trim($author)],
             'auth' => [
-                'user' => $request->user(),
+                'user' => $request->user()
+                    ? array_merge(
+                        $request->user()->only(['id', 'name', 'email', 'avatar']),
+                        [
+                            'role' => $request->user()->role, // already a string
+                            'role_label' => method_exists($request->user(), 'getRoleLabel') ? $request->user()->getRoleLabel() : null,
+                        ]
+                    )
+                    : null,
             ],
             'ziggy' => fn (): array => [
                 ...(new Ziggy)->toArray(),

@@ -30,8 +30,7 @@
             }
         </style>
 
-        <title inertia>{{ config('app.name', 'Laravel') }}</title>
-
+        <title inertia>{{ config('app.name', 'Uni Edu Connect Affiliate') }}</title>
         <link rel="icon" href="/favicon.ico" sizes="any">
         <link rel="icon" href="/favicon.svg" type="image/svg+xml">
         <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -44,7 +43,34 @@
         @vite(['resources/js/app.tsx', "resources/js/pages/{$page['component']}.tsx"])
         @inertiaHead
     </head>
-    <body class="font-sans antialiased">
+    <body class="font-sans antialiased bg-background text-foreground">
         @inertia
     </body>
+</html>
+                <nav>
+                    <ul class="flex space-x-4">
+                        <li><a href="/dashboard" class="hover:underline">Dashboard</a></li>
+                        <li><a href="/about" class="hover:underline">About</a></li>
+                        <li><a href="/contact" class="hover:underline">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main class="container mx-auto py-8">
+            <section class="text-center">
+                <h2 class="text-2xl font-semibold mb-4">Welcome to Laravel Starter Kit</h2>
+                <p class="text-muted-foreground">This is a simple landing page for your Laravel application.</p>
+            </section>
+        </main>
+
+        <footer class="bg-secondary text-secondary-foreground p-4">
+            <div class="container mx-auto text-center">
+                <p>&copy; {{ date('Y') }} Laravel Starter Kit. All rights reserved.</p>
+            </div>
+        </footer>
+
+        @inertia
+    </body>
+</html>
 </html>

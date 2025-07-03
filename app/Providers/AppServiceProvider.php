@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Enums\Role;
+use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider

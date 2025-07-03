@@ -117,6 +117,20 @@ export default function Dashboard() {
                     </select>
                     <p>{getTimeForTimezone()}</p>
                 </div>
+                <div className="relative aspect-video overflow-hidden rounded-xl border border-sidebar-border/70 dark:border-sidebar-border">
+                    <PlaceholderPattern className="absolute inset-0 size-full stroke-neutral-900/20 dark:stroke-neutral-100/20" />
+                    <div className="absolute inset-0 flex flex-col items-center justify-center text-lg">
+                        <h3 className="mb-2 text-xl font-semibold">Available Roles</h3>
+                        <ul className="text-sm text-muted-foreground list-disc">
+                            <li>Super Administrator</li>
+                            <li>Administrator</li>
+                            <li>Manager</li>
+                            <li>Staff Member</li>
+                            <li>Premium Affiliate</li>
+                            <li>Affiliate</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </AppLayout>
     );
