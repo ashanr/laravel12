@@ -34,7 +34,7 @@ This is a starter kit for building modern web applications using Laravel and Rea
 
 3. Install Node.js dependencies:
    ```bash
-   npm install
+   pnpm install
    ```
 
 4. Set up the environment:
@@ -50,17 +50,17 @@ This is a starter kit for building modern web applications using Laravel and Rea
 
 6. Start the development server:
    ```bash
-   npm run dev
+   pnpm run dev
    ```
 
 7. Open your browser and navigate to `http://localhost`.
 
 ## Scripts
 
-- `npm run dev`: Start the Vite development server.
-- `npm run build`: Build the project for production.
-- `npm run lint`: Run ESLint to fix code issues.
-- `npm run format`: Format code using Prettier.
+- `pnpm run dev`: Start the Vite development server.
+- `pnpm run build`: Build the project for production.
+- `pnpm run lint`: Run ESLint to fix code issues.
+- `pnpm run format`: Format code using Prettier.
 
 ## Testing
 

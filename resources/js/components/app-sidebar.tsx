@@ -95,31 +95,31 @@ export function AppSidebar() {
                             onClick={() => setTimezone('LK')}
                             className={`p-2 rounded ${timezone === 'LK' ? 'bg-blue-500 text-white' : 'bg-gray-200'}`}
                         >
-                            🇱🇰
+                            <img src="/flags/lk.png" alt="Sri Lanka" className="inline-block w-6 h-4" />
                         </button>
                         <button
                             onClick={() => setTimezone('UK')}
                             className={`p-2 rounded ${timezone === 'UK' ? 'bg-blue-500 text-white' : 'bg-gray-200'}`}
                         >
-                            🇬🇧
+                            <img src="/flags/gb.png" alt="United Kingdom" className="inline-block w-6 h-4" />
                         </button>
                         <button
                             onClick={() => setTimezone('AU')}
                             className={`p-2 rounded ${timezone === 'AU' ? 'bg-blue-500 text-white' : 'bg-gray-200'}`}
                         >
-                            🇦🇺
+                            <img src="/flags/au.png" alt="Australia" className="inline-block w-6 h-4" />
                         </button>
                         <button
                             onClick={() => setTimezone('CA')}
                             className={`p-2 rounded ${timezone === 'CA' ? 'bg-blue-500 text-white' : 'bg-gray-200'}`}
                         >
-                            🇨🇦
+                            <img src="/flags/ca.png" alt="Canada" className="inline-block w-6 h-4" />
                         </button>
                         <button
                             onClick={() => setTimezone('NZ')}
                             className={`p-2 rounded ${timezone === 'NZ' ? 'bg-blue-500 text-white' : 'bg-gray-200'}`}
                         >
-                            🇳🇿
+                            <img src="/flags/nz.png" alt="New Zealand" className="inline-block w-6 h-4" />
                         </button>
                     </div>
                     <p className="text-lg">{getTimeForTimezone()}</p>
