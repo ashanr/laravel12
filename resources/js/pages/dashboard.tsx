@@ -69,6 +69,13 @@ export default function Dashboard() {
                         <PlaceholderPattern className="absolute inset-0 size-full stroke-neutral-900/20 dark:stroke-neutral-100/20" />
                         <div className="absolute inset-0 flex flex-col items-center justify-center text-lg font-bold">
                             <h3 className="mb-4 text-xl font-semibold">Users</h3>
+                            {/* Add link to users index */}
+                            <a
+                                href="/users"
+                                className="mb-4 inline-block rounded bg-blue-600 px-3 py-1 text-white hover:bg-blue-700 text-sm"
+                            >
+                                View All Users
+                            </a>
                             <table className="table-auto w-full border-collapse border border-gray-300 text-sm font-normal">
                                 <thead className="bg-gray-100">
                                     <tr>
@@ -102,21 +109,7 @@ export default function Dashboard() {
                     <PlaceholderPattern className="absolute inset-0 size-full stroke-neutral-900/20 dark:stroke-neutral-100/20" />
                     <div className="absolute inset-0 flex items-center justify-center text-lg font-bold">4</div>
                 </div>
-                <div className="clock">
-                    <h2>Current Time</h2>
-                    <select
-                        value={timezone}
-                        onChange={(e) => setTimezone(e.target.value as 'LK' | 'UK' | 'AU' | 'CA' | 'NZ')}
-                        className="mb-2 p-2 border rounded"
-                    >
-                        <option value="LK">🇱🇰</option>
-                        <option value="UK">🇬🇧</option>
-                        <option value="AU">🇦🇺</option>
-                        <option value="CA">🇨🇦</option>
-                        <option value="NZ">🇳🇿</option>
-                    </select>
-                    <p>{getTimeForTimezone()}</p>
-                </div>
+    
                 <div className="relative aspect-video overflow-hidden rounded-xl border border-sidebar-border/70 dark:border-sidebar-border">
                     <PlaceholderPattern className="absolute inset-0 size-full stroke-neutral-900/20 dark:stroke-neutral-100/20" />
                     <div className="absolute inset-0 flex flex-col items-center justify-center text-lg">

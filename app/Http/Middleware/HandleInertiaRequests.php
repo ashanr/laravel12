@@ -46,9 +46,8 @@ class HandleInertiaRequests extends Middleware
             'auth' => [
                 'user' => $request->user()
                     ? array_merge(
-                        $request->user()->only(['id', 'name', 'email', 'avatar']),
+                        $request->user()->only(['id', 'name', 'email', 'avatar', 'role']), // <-- add 'role' here
                         [
-                            'role' => $request->user()->role, // already a string
                             'role_label' => method_exists($request->user(), 'getRoleLabel') ? $request->user()->getRoleLabel() : null,
                         ]
                     )
