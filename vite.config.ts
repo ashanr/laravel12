@@ -26,14 +26,17 @@ export default defineConfig({
     },
     build: {
         rollupOptions: {
-            input: {
-                app: './resources/js/app.tsx',
+            input: (() => {
+                const entries = {
+                    app: './resources/js/app.tsx',
+                };
                 // Make sure all page components are included in the build
-                ...glob.sync('./resources/js/pages/**/*.tsx').reduce((entries, path) => {
-                    const name = path.replace('./resources/js/pages/', '').replace('.tsx', '')
-                    return { ...entries, [name]: path }
-                }, {})
-            }
+                glob.sync('./resources/js/pages/**/*.tsx').forEach((path) => {
+                    const name = path.replace('./resources/js/pages/', '').replace('.tsx', '');
+                    entries[name] = path;
+                });
+                return entries;
+            })()
         }
     }
 });

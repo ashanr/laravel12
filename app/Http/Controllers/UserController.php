@@ -31,7 +31,7 @@ class UserController extends Controller
     
     public function create()
     {
-        return Inertia::render('Users/Create', [
+        return Inertia::render('users/create', [
             'availableRoles' => $this->getAvailableRolesForCurrentUser()
         ]);
     }

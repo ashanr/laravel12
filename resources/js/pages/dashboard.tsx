@@ -67,42 +67,7 @@ export default function Dashboard() {
                     </div>
                     <div className="relative aspect-video overflow-hidden rounded-xl border border-sidebar-border/70 dark:border-sidebar-border">
                         <PlaceholderPattern className="absolute inset-0 size-full stroke-neutral-900/20 dark:stroke-neutral-100/20" />
-                        <div className="absolute inset-0 flex flex-col items-center justify-center text-lg font-bold">
-                            <h3 className="mb-4 text-xl font-semibold">Users</h3>
-                            {/* Add link to users index */}
-                            <a
-                                href="/users"
-                                className="mb-4 inline-block rounded bg-blue-600 px-3 py-1 text-white hover:bg-blue-700 text-sm"
-                            >
-                                View All Users
-                            </a>
-                            <table className="table-auto w-full border-collapse border border-gray-300 text-sm font-normal">
-                                <thead className="bg-gray-100">
-                                    <tr>
-                                        <th
-                                            className="border border-gray-300 px-4 py-2 cursor-pointer"
-                                            onClick={() => handleSort('id')}
-                                        >
-                                            ID {sortConfig?.key === 'id' && (sortConfig.direction === 'asc' ? '↑' : '↓')}
-                                        </th>
-                                        <th
-                                            className="border border-gray-300 px-4 py-2 cursor-pointer"
-                                            onClick={() => handleSort('name')}
-                                        >
-                                            Name {sortConfig?.key === 'name' && (sortConfig.direction === 'asc' ? '↑' : '↓')}
-                                        </th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    {users.map((user) => (
-                                        <tr key={user.id} className="hover:bg-gray-50">
-                                            <td className="border border-gray-300 px-4 py-2 text-center">{user.id}</td>
-                                            <td className="border border-gray-300 px-4 py-2">{user.name}</td>
-                                        </tr>
-                                    ))}
-                                </tbody>
-                            </table>
-                        </div>
+                  
                     </div>
                 </div>
                 <div className="relative min-h-[100vh] flex-1 overflow-hidden rounded-xl border border-sidebar-border/70 md:min-h-min dark:border-sidebar-border">
