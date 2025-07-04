@@ -4,7 +4,6 @@ import AppLayout from '@/layouts/app-layout';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import InputError from '@/components/input-error';
 import { FormEventHandler } from 'react';
 
@@ -83,21 +82,19 @@ export default function Create({ availableRoles }: CreateProps) {
                     
                     <div className="grid gap-2">
                         <Label htmlFor="role">Role</Label>
-                        <Select
+                        <select
+                            id="role"
                             value={data.role}
-                            onValueChange={(value) => setData('role', value)}
+                            onChange={(e) => setData('role', e.target.value)}
+                            className="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
                         >
-                            <SelectTrigger>
-                                <SelectValue placeholder="Select a role" />
-                            </SelectTrigger>
-                            <SelectContent>
-                                {availableRoles.map((role) => (
-                                    <SelectItem key={role} value={role}>
-                                        {role.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}
-                                    </SelectItem>
-                                ))}
-                            </SelectContent>
-                        </Select>
+                            <option value="">Select a role</option>
+                            {availableRoles.map((role) => (
+                                <option key={role} value={role}>
+                                    {role.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}
+                                </option>
+                            ))}
+                        </select>
                         <InputError message={errors.role} />
                     </div>
                     

@@ -21,6 +21,7 @@ interface User {
     name: string;
     email: string;
     role: string;
+    role_label?: string;
 }
 
 interface UsersIndexProps {
@@ -84,7 +85,7 @@ export default function Index({ users }: UsersIndexProps) {
                                 <TableCell>{user.id}</TableCell>
                                 <TableCell>{user.name}</TableCell>
                                 <TableCell>{user.email}</TableCell>
-                                <TableCell>{formatRole(user.role)}</TableCell>
+                                <TableCell>{user.role_label ?? formatRole(user.role)}</TableCell>
                                 <TableCell className="text-right">
                                     <div className="flex justify-end gap-2">
                                         <Button variant="outline" size="sm" asChild>

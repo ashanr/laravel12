@@ -115,12 +115,12 @@ export default function Dashboard() {
                     <div className="absolute inset-0 flex flex-col items-center justify-center text-lg">
                         <h3 className="mb-2 text-xl font-semibold">Available Roles</h3>
                         <ul className="text-sm text-muted-foreground list-disc">
-                            <li>Super Administrator</li>
-                            <li>Administrator</li>
-                            <li>Manager</li>
-                            <li>Staff Member</li>
+                            <li>Super Admin</li>
+                            <li>Admin</li>
+                            <li>Student Manager</li>
+                            <li>Staff</li>
                             <li>Premium Affiliate</li>
-                            <li>Affiliate</li>
+                            <li>Normal Affiliate</li>
                         </ul>
                     </div>
                 </div>

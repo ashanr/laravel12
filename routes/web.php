@@ -19,14 +19,9 @@ Route::middleware(['auth', 'verified'])->group(function () {
         return Inertia::render('dashboard');
     })->name('dashboard');
     
-    // User management routes - only accessible by superadmin, admin and manager
-    Route::middleware('role:' . implode(',', [
-        Role::SUPERADMIN->value,
-        Role::ADMIN->value,
-        Role::MANAGER->value,
-    ]))->group(function () {
+
         Route::resource('users', UserController::class);
-    });
+  
 });
 
 Route::get('/about', function () {

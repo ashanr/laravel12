@@ -41,7 +41,7 @@ class RegisteredUserController extends Controller
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
-            'role' => Role::AFFILIATE_NORMAL->value, // default role
+            'role' => \App\Enums\Role::AFFILIATE_NORMAL->value, // always set default role
         ]);
 
         event(new Registered($user));
